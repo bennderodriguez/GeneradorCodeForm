@@ -29,18 +29,6 @@
     </div>
     <div class="col">
         <div class="card">
-            <div class="card-header">JS Code</div>
-            <div class="card-body">
-                <textarea rows="10" cols="50" id="JS">
-                </textarea>
-            </div> 
-            <div class="card-footer">
-                <button class="btn btn-outline-info" id="JSCopy">Copy</button>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card">
             <div class="card-header">PHP Code</div>
             <div class="card-body">
                 <textarea rows="10" cols="50" id="PHP">
@@ -51,6 +39,20 @@
             </div>
         </div>
     </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-header">JS Code</div>
+            <div class="card-body">
+                <textarea rows="10" cols="50" id="JS">
+                </textarea>
+            </div> 
+            <div class="card-footer">
+                <button class="btn btn-outline-info" id="JSCopy">Copy</button>
+            </div>
+        </div>
+    </div>
+    
 </div>
 <?php include './footer.php'; ?>
 
@@ -64,10 +66,12 @@
     }
 
     function HTMLCode(tag) {
-        var HTMLCode = '<div class="form-group">\n';
-        HTMLCode += '<label for="' + tag + '">' + tag + '</label>\n';
-        HTMLCode += '<input type="text" class="form-control" id="' + tag + '" name="' + tag + '" placeholder="Enter ' + tag + '" required>\n';
-        HTMLCode += '<div class="help-block with-errors text-danger"></div>\n';
+        var HTMLCode = '<div class="col-sm-4">\n';
+        HTMLCode += '   <div class="form-group">\n';
+        HTMLCode += '       <label for="' + tag + '">' + tag + '</label>\n';
+        HTMLCode += '       <input type="text" class="form-control" id="' + tag + '" name="' + tag + '" placeholder="Enter ' + tag + '" required>\n';
+        HTMLCode += '   <div class="help-block with-errors text-danger"></div>\n';
+        HTMLCode += '   </div>\n';
         HTMLCode += '</div>\n';
 
         console.log(HTMLCode);
